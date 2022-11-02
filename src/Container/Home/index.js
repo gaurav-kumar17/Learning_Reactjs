@@ -27,7 +27,7 @@ const HomeContainer = () => {
   //   };
   return (
     <>
-      <HeaderComponents />
+      {/* <HeaderComponents /> */}
       <Container>
         <Row>
           <Col>
@@ -83,7 +83,7 @@ const HomeContainer = () => {
         </Row>
       </Container>
 
-      <FooterComponents />
+      {/* <FooterComponents /> */}
     </>
   );
 };

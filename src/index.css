@@ -9,3 +9,15 @@ h1{
 
   /* font-weight: bold; */
 }
+.headerNavLink{
+  display: block;
+}
+.headerNavLink a{
+
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-style: italic;
+  display: flex;
+
+}
