@@ -21,3 +21,7 @@ h1{
   display: flex;
 
 }
+p .badge.bg-secondary{
+  font-size: 22px;
+  
+}
