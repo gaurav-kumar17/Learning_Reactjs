@@ -12,6 +12,7 @@ const HeaderComponents = () => {
         <Container className="headerNavLink">
           <Link to="/">Home Page</Link>
           <Link to="/about">About Page</Link>
+          <Link to="/useref">UseRef Page</Link>
         </Container>
       </Navbar>
     </header>
