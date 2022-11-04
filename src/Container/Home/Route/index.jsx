@@ -5,6 +5,7 @@ import HeaderComponents from '../../../Components/Header'
 import AboutPageContainer from '../About'
 
 import { BrowserRouter,Route, Routes} from 'react-router-dom'
+import UseRefComp from '../UseRef'
 
 const AllRouterWrap = () => {
   return (
@@ -16,6 +17,7 @@ const AllRouterWrap = () => {
         <Routes>
             <Route path='/' element={<HomeContainer/>}/>
             <Route path='/about' element={<AboutPageContainer/>}/>
+            <Route path='/useref' element={<UseRefComp/>}/>
         </Routes>
     <FooterComponents/>
     </BrowserRouter>

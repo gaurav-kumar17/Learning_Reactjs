@@ -25,3 +25,8 @@ p .badge.bg-secondary{
   font-size: 22px;
   
 }
+.wrapSection{
+  border: 1px solid red;
+  width: 600px;
+  margin: 20px auto;
+}
