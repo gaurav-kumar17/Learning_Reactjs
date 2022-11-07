@@ -10,6 +10,8 @@ const SingleCard = ({ data }) => {
           Product Name:-
           <Link to={`/products-details/${data.id}`}>{data.title}</Link>
         </h2>
+
+        
         <h3>
           <img src={data.thumbnail} alt={data.thumbnail} />
         </h3>

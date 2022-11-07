@@ -56,3 +56,18 @@ h2 a{
   font-size: 30px;
   
 }
+.productDetails h3{
+
+  font-size: 20px;
+  color: brown;
+
+}
+.productDetails>img{
+
+  width:300px;
+}
+
+.productDetails .productImage img{
+
+  width: 200px;
+} 
