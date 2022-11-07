@@ -5,10 +5,7 @@
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   /* font-weight: normal; */
 }
-h1{
 
-  /* font-weight: bold; */
-}
 .headerNavLink{
   display: block;
 }
@@ -29,4 +26,33 @@ p .badge.bg-secondary{
   border: 1px solid red;
   width: 600px;
   margin: 20px auto;
+}
+.blog{
+  background:rgba(255, 192, 203, 0.087);
+  border:1px solid brown;
+  padding:15px;
+  font-size: 15px;
+  margin:15px;
+  border-radius: 5px;
+}
+.blog span{
+
+  display: inline-block;
+  vertical-align: top;
+  /* border: 2px solid green; */
+  margin-right: 15px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.blog h3 img{
+  width: 300px;
+}
+.blog span img{
+
+  width: 180px;
+}
+h2 a{
+  font-size: 30px;
+  
 }
