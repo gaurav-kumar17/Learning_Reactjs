@@ -15,20 +15,23 @@ import ListGroup from "react-bootstrap/ListGroup";
 const ProductContainer = () => {
   const [productData, setProductData] = useState([]);
   const [productDataCat, setProductDataCat] = useState([]);
+  const [currentCat,setCurrentCat]=useState('smartphones');
 
-  const API_URL = "https://dummyjson.com/products?limit=10";
+  // const API_URL = "https://dummyjson.com/products?limit=10";
 
   const fetchData = async () => {
-    const data = await axios(API_URL);
+    const data = await axios(`https://dummyjson.com/products/category/${currentCat}`);
     // console.log("data", data);
     const myData = data.data.products;
     setProductData(myData);
   };
 
+  console.log("datas",currentCat);
+
   const fetchDataCate = async () => {
     const data = await axios("https://dummyjson.com/products/categories");
     setProductDataCat(data.data);
-    console.log("datacat", data);
+    // console.log("datacat", data);
   };
 
   // yaha par useEffect tab run hoga jab app/total components load ho jayega.
@@ -36,6 +39,11 @@ const ProductContainer = () => {
     fetchData();
     fetchDataCate();
   }, []);
+
+  useEffect(()=>{
+
+    fetchData();
+  },[currentCat]);
 
   return (
     <>
@@ -49,7 +57,11 @@ const ProductContainer = () => {
             <ListGroup>
               {productDataCat && productDataCat.length > 0
                 ? productDataCat.map((item) => {
-                    return (<ListGroup.Item key={item}>{item}</ListGroup.Item>)
+                    return (<ListGroup.Item key={item} onClick={()=>{setCurrentCat(item)}}>
+
+                    {item}
+
+                    </ListGroup.Item>)
                   })
                 : ""
               }
