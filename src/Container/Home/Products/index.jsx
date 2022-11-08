@@ -10,7 +10,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import ListGroup from "react-bootstrap/ListGroup";
+
+
+import CategoryComponent from "../../../Components/Category";
 
 const ProductContainer = () => {
   const [productData, setProductData] = useState([]);
@@ -52,24 +54,12 @@ const ProductContainer = () => {
       <Container>
         <Row>
           <Col sm={2}>
-            <h4>Category:-</h4>
-
-            <ListGroup>
-              {productDataCat && productDataCat.length > 0
-                ? productDataCat.map((item) => {
-                    return (<ListGroup.Item key={item} onClick={()=>{setCurrentCat(item)}}>
-
-                    {item}
-
-                    </ListGroup.Item>)
-                  })
-                : ""
-              }
-              {/* <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-              <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-              <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-              <ListGroup.Item>Vestibulum at eros</ListGroup.Item> */}
-            </ListGroup>
+            <CategoryComponent
+              productDataCat={productDataCat}
+              setCurrentCat={setCurrentCat}
+              currentCat={currentCat}
+            />
+            
           </Col>
 
           <Col sm={10}>
