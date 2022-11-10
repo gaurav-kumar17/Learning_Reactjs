@@ -23,17 +23,17 @@ const ProductContainer = () => {
 
   const fetchData = async () => {
     const data = await axios(`https://dummyjson.com/products/category/${currentCat}`);
-    // console.log("data", data);
     const myData = data.data.products;
     setProductData(myData);
+    // console.log("data", data);
   };
 
-  console.log("datas",currentCat);
+  // console.log("datas",currentCat);
 
   const fetchDataCate = async () => {
     const data = await axios("https://dummyjson.com/products/categories");
     setProductDataCat(data.data);
-    // console.log("datacat", data);
+    console.log("datacat", productDataCat);
   };
 
   // yaha par useEffect tab run hoga jab app/total components load ho jayega.
@@ -63,6 +63,22 @@ const ProductContainer = () => {
           </Col>
 
           <Col sm={10}>
+            <select value={currentCat} onChange={(e)=>{
+
+              setCurrentCat(e.target.value);
+            }}>            
+            {
+              productDataCat && productDataCat.length > 0 ? productDataCat.map((item)=>{
+                return(
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                )
+              }) : <option>Data Not Found!</option>
+            }
+
+            </select>
+
             {productData && productData.length > 0
               ? productData.map((item) => {
                   {
@@ -79,6 +95,8 @@ const ProductContainer = () => {
                 })
               : "Data Not Found"}
           </Col>
+
+
         </Row>
       </Container>
     </>
